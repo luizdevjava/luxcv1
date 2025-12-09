@@ -9,12 +9,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
-  
-  // Para produção com PostgreSQL, mude para:
-  // provider = "postgresql"
-  // url      = env("DATABASE_URL")
 }
 
 model User {

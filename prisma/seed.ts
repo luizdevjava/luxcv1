@@ -2,7 +2,7 @@ import { db } from '../src/lib/db';
 import bcrypt from 'bcryptjs';
 
 async function main() {
-  console.log('Iniciando seed do banco de dados...');
+  console.log('Iniciando seed do banco de dados PostgreSQL...');
 
   // Criar administrador padrão
   const adminPassword = await bcrypt.hash('admin123', 10);
@@ -82,7 +82,7 @@ async function main() {
 
   console.log('Anúncios criados:', { anuncio1, anuncio2, anuncio3 });
 
-  console.log('Seed concluído com sucesso!');
+  console.log('Seed concluído com sucesso no PostgreSQL!');
 }
 
 main()
